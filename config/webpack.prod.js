@@ -9,7 +9,7 @@ const prodConfig = {
   },
   mode: 'production',
   output: {
-    filename: '[name].[contenthash].js',
+    filename: '[name].js',
     publicPath: '/floatingMenu/latest/',
   },
   plugins: [
