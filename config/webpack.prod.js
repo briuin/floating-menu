@@ -5,7 +5,7 @@ const commonConfig = require('./webpack.common');
 
 const prodConfig = {
   entry: {
-    main: "./src/main-spa.js",
+    main: "./src/index.js",
   },
   mode: 'production',
   output: {
