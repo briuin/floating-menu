@@ -4517,6 +4517,11 @@ single-spa-react@^4.6.1:
   dependencies:
     browserslist-config-single-spa "^1.0.1"
 
+single-spa@^5.9.3:
+  version "5.9.3"
+  resolved "https://registry.yarnpkg.com/single-spa/-/single-spa-5.9.3.tgz#2d151cbb3b273629a5b27b30a3b8ca847dcba4c5"
+  integrity sha512-qMGraRzIBsodV6569Fob4cQ4/yQNrcZ5Achh3SAQDljmqUtjAZ7BAA7GAyO/l5eizb7GtTmVq9Di7ORyKw82CQ==
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"

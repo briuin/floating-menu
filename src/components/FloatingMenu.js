@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
+import ReactDOM from 'react-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import { init as initFloatingButton } from "../services/floating-menu.service";
 import MenuIcon from "@material-ui/icons/Menu";
+import singleSpaReact from 'single-spa-react';
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -131,3 +133,19 @@ export default function FloatingMenu() {
     </React.Fragment>
   );
 }
+
+const reactLifecycles = singleSpaReact({
+  React,
+  ReactDOM,
+  rootComponent: FloatingMenu,
+  errorBoundary(err, info, props) {
+    // https://reactjs.org/docs/error-boundaries.html
+    return (
+      <div>This renders when a catastrophic error occurs</div>
+    );
+  },
+});
+
+export const bootstrap = reactLifecycles.bootstrap;
+export const mount = reactLifecycles.mount;
+export const unmount = reactLifecycles.unmount;

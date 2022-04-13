@@ -17,7 +17,7 @@ const devConfig = {
       name: 'floatingMenu',
       filename: 'remoteEntry.js',
       exposes: {
-        './FloatingMenu': './src/bootstrap',
+        './FloatingMenu': './src/components/FloatingMenu',
       },
       shared: packageJson.dependencies,
     }),
