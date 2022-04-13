@@ -11,7 +11,7 @@ const prodConfig = {
   output: {
     filename: '[name].js',
     publicPath: 'auto',
-    chunkFilename: '[name].js',
+    chunkFilename: 'lib_[name].js',
   },
   optimization: {
     chunkIds: 'named',
