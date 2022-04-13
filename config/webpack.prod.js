@@ -10,7 +10,7 @@ const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].js',
-    publicPath: 'auto',
+    publicPath: 'https://briuin.github.io/floating-menu/',
     chunkFilename: 'lib_[name].js',
   },
   optimization: {
