@@ -1,1 +1,0 @@
-(self.webpackChunkfloating_menu=self.webpackChunkfloating_menu||[]).push([[352],{352:(e,n,l)=>{Promise.all([l.e(600),l.e(271),l.e(858)]).then(l.bind(l,858))}}]);

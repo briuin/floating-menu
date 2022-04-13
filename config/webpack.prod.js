@@ -11,6 +11,10 @@ const prodConfig = {
   output: {
     filename: '[name].js',
     publicPath: 'auto',
+    chunkFilename: '[name].js',
+  },
+  optimization: {
+    chunkIds: 'named',
   },
   plugins: [
     new ModuleFederationPlugin({

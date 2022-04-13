@@ -1,0 +1,1 @@
+(self.webpackChunkfloating_menu=self.webpackChunkfloating_menu||[]).push([["src_index_js"],{352:(e,_,s)=>{Promise.all([s.e("vendors-node_modules_material-ui_core_esm_styles_makeStyles_js-node_modules_material-ui_icons-3bb0a9"),s.e("webpack_sharing_consume_default_react_react"),s.e("src_bootstrap_js")]).then(s.bind(s,858))}}]);
