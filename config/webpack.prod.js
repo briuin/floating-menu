@@ -4,6 +4,9 @@ const packageJson = require('../package.json');
 const commonConfig = require('./webpack.common');
 
 const prodConfig = {
+  entry: {
+    main: "./src/main-spa.js",
+  },
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
@@ -15,7 +18,7 @@ const prodConfig = {
       filename: 'remoteEntry.js',
       library: { type: "system" },
       exposes: {
-        './FloatingMenu': './src/bootstrap',
+        './FloatingMenu': './src/main-spa.js',
       },
       shared: packageJson.dependencies,
     }),
