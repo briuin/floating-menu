@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mainWrapper: {
-    position: "relative",
+    position: "fixed",
     width: "100%",
     height: "100vh",
     overflow: "hidden",
