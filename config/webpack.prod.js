@@ -10,7 +10,7 @@ const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].js',
-    publicPath: './',
+    publicPath: '',
     chunkFilename: 'lib_[name].js',
   },
   optimization: {
