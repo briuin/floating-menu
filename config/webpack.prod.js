@@ -22,7 +22,7 @@ const prodConfig = {
       filename: 'remoteEntry.js',
       library: { type: "system" },
       exposes: {
-        './FloatingMenu': './src/index.js',
+        './FloatingMenu': './src/components/FloatingMenu',
       },
       shared: packageJson.dependencies,
     }),
