@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { init as initFloatingButton } from "../services/floating-menu.service";
-import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles((theme) => ({
-  '@global': {
+  "@global": {
     ul: {
       padding: 0,
       margin: 0,
@@ -110,6 +110,8 @@ export default function FloatingMenu() {
     );
   });
 
+  const icons = [classes.menuItem, classes.menuItem, classes.menuItem];
+
   return (
     <React.Fragment>
       <div id="pk-floating-menu-wrapper" className={classes.mainWrapper}>
@@ -118,15 +120,11 @@ export default function FloatingMenu() {
             <MenuIcon />
           </div>
           <ul className={classes.menuItemList}>
-            <li className={classes.menuItem}>
-              <MenuIcon />
-            </li>
-            <li className={classes.menuItem}>
-              <MenuIcon />
-            </li>
-            <li className={classes.menuItem}>
-              <MenuIcon />
-            </li>
+            {icons.map((x) => (
+              <li className={x}>
+                <MenuIcon />
+              </li>
+            ))}
           </ul>
         </div>
       </div>

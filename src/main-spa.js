@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import rootComponent from './App';
 // Note that SingleSpaContext is a react@16.3 (if available) context that provides the singleSpa props
-import singleSpaReact, {SingleSpaContext} from 'single-spa-react';
+import singleSpaReact from 'single-spa-react';
 
 const reactLifecycles = singleSpaReact({
   React,
