@@ -5,7 +5,7 @@ const commonConfig = require('./webpack.common');
 
 const prodConfig = {
   entry: {
-    main: "./src/main-spa.js",
+    main: "./src/index.js",
   },
   mode: 'production',
   output: {
@@ -18,7 +18,7 @@ const prodConfig = {
       filename: 'remoteEntry.js',
       library: { type: "system" },
       exposes: {
-        './FloatingMenu': './src/main-spa.js',
+        './FloatingMenu': './src/index.js',
       },
       shared: packageJson.dependencies,
     }),
