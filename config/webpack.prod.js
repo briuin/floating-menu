@@ -2,6 +2,8 @@ const { merge } = require('webpack-merge');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const packageJson = require('../package.json');
 const commonConfig = require('./webpack.common');
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const prodConfig = {
   entry: {
@@ -9,6 +11,7 @@ const prodConfig = {
   },
   mode: 'production',
   output: {
+    path: path.resolve(__dirname, '../docs'),
     filename: '[name].js',
     chunkFilename: 'lib_[name].js',
   },
@@ -16,6 +19,7 @@ const prodConfig = {
     chunkIds: 'named',
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new ModuleFederationPlugin({
       name: 'floatingMenu',
       filename: 'remoteEntry.js',
