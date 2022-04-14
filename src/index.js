@@ -1,2 +1,2 @@
-import('./setup-public-path');
+import './setup-public-path';
 import('./bootstrap');
