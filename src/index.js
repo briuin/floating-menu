@@ -1,2 +1,2 @@
-__webpack_public_path__ = "https://briuin.github.io/floating-menu/";
+import './setup-public-path';
 import('./bootstrap');
