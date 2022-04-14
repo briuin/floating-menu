@@ -4,6 +4,7 @@ const packageJson = require('../package.json');
 const commonConfig = require('./webpack.common');
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const SystemJSPublicPathWebpackPlugin = require("systemjs-webpack-interop/SystemJSPublicPathWebpackPlugin");
 
 const prodConfig = {
   entry: {
@@ -20,6 +21,9 @@ const prodConfig = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new SystemJSPublicPathWebpackPlugin({
+      rootDirectoryLevel: 1,
+    }),
     new ModuleFederationPlugin({
       name: 'floatingMenu',
       filename: 'remoteEntry.js',
