@@ -5,12 +5,11 @@ const commonConfig = require('./webpack.common');
 
 const prodConfig = {
   entry: {
-    main: "./src/index.js",
+    main: "./src/index.js"
   },
   mode: 'production',
   output: {
     filename: '[name].js',
-    publicPath: 'https://briuin.github.io/floating-menu/',
     chunkFilename: 'lib_[name].js',
   },
   optimization: {
@@ -24,7 +23,12 @@ const prodConfig = {
       exposes: {
         './FloatingMenu': './src/components/FloatingMenu',
       },
-      shared: packageJson.dependencies,
+      shared: {
+        ...packageJson.dependencies,
+        react: {
+          eager: true,
+        },
+      },
     }),
   ],
 };
