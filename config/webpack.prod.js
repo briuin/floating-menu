@@ -5,13 +5,12 @@ const commonConfig = require('./webpack.common');
 
 const prodConfig = {
   entry: {
-    main: "./src/index.js"
+    floatingMenu: "./src/index.js"
   },
   mode: 'production',
   output: {
     filename: '[name].js',
     chunkFilename: 'lib_[name].js',
-    publicPath: '',
   },
   optimization: {
     chunkIds: 'named',
