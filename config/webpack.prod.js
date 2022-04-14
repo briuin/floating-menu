@@ -30,12 +30,6 @@ const prodConfig = {
       },
       shared: {
         ...packageJson.dependencies,
-        react: {
-          eager: true,
-        },
-        'react-dom': {
-          eager: true,
-        },
       },
     }),
   ],
