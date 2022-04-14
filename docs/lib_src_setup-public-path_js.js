@@ -1,0 +1,1 @@
+(self.webpackChunkfloating_menu=self.webpackChunkfloating_menu||[]).push([["src_setup-public-path_js"],{158:(t,e,n)=>{console.log("start set path"),n.p="https://briuin.github.io/floating-menu/",console.log("url",document.currentScript.src+"/../")}}]);
