@@ -1,3 +1,2 @@
-import('./setup-public-path').then(() => {
-    import('./bootstrap');
-});
+import './setup-public-path';
+import('./bootstrap');
