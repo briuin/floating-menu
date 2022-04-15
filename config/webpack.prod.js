@@ -6,18 +6,10 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const prodConfig = {
-  entry: {
-    floatingMenu: "./src/index.js"
-  },
   mode: 'production',
   output: {
     path: path.resolve(__dirname, '../docs'),
-    filename: '[name].js',
-    chunkFilename: 'lib_[name].js',
     publicPath: 'https://briuin.github.io/floating-menu/'
-  },
-  optimization: {
-    chunkIds: 'named',
   },
   plugins: [
     new CleanWebpackPlugin(),
