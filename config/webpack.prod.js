@@ -24,7 +24,6 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: 'floatingMenu',
       filename: 'remoteEntry.js',
-      library: { type: "system" },
       exposes: {
         './FloatingMenu': './src/components/FloatingMenu',
       },
