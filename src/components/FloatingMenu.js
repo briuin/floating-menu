@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { init as initFloatingButton } from "../services/floating-menu.service";
 import MenuIcon from "@material-ui/icons/Menu";
 import AccountCircle from "@material-ui/icons/AccountCircle";
+import HomeIcon from "@material-ui/icons/Home";
 import singleSpaReact from 'single-spa-react';
 
 const useStyles = makeStyles((theme) => ({
@@ -118,6 +119,12 @@ export default function FloatingMenu() {
     'class': classes.menuItem,
     'action': () => {
       location.href = '/#/account/login'
+    },
+  }, {
+    'icon': <HomeIcon />,
+    'class': classes.menuItem,
+    'action': () => {
+      location.href = '/'
     }
   }];
 
