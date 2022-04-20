@@ -117,13 +117,15 @@ export default function FloatingMenu() {
   const icons = [{
     'icon': <AccountCircle />,
     'class': classes.menuItem,
-    'action': () => {
+    'action': (e) => {
+      e.stopPropagation()
       location.href = '/#/account/login'
     },
   }, {
     'icon': <HomeIcon />,
     'class': classes.menuItem,
-    'action': () => {
+    'action': (e) => {
+      e.stopPropagation()
       location.href = '/'
     }
   }];
