@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import { init as initFloatingButton } from "../services/floating-menu.service";
 import MenuIcon from "@material-ui/icons/Menu";
+import AccountCircle from "@material-ui/icons/AccountCircle";
 import singleSpaReact from 'single-spa-react';
 
 const useStyles = makeStyles((theme) => ({
@@ -63,8 +64,8 @@ const useStyles = makeStyles((theme) => ({
     transform: "translate(-50%, -50%)",
     top: "40%",
     left: "30px",
-    width: "50px",
-    height: "50px",
+    width: "64px",
+    height: "64px",
     borderRadius: "50%",
     "&.fab-active li:hover": {
       backgroundColor: "#f8e487",
@@ -112,19 +113,25 @@ export default function FloatingMenu() {
     );
   });
 
-  const icons = [classes.menuItem, classes.menuItem, classes.menuItem];
+  const icons = [{
+    'icon': <AccountCircle />,
+    'class': classes.menuItem,
+    'action': () => {
+      location.href = '/#/account/login'
+    }
+  }];
 
   return (
     <React.Fragment>
-      <div id="pk-floating-menu-wrapper" className={classes.mainWrapper}>
+      <div id="pk-floating-menu-wrapper" className={classes.mainWrapper} style={{'zIndex':1000}}>
         <div id="pk-floating-menu" className={classes.floatingButtonWrapper}>
           <div className={classes.fabButton}>
             <MenuIcon />
           </div>
           <ul className={classes.menuItemList}>
-            {icons.map((x) => (
-              <li className={x}>
-                <MenuIcon />
+            {icons.map((x, i) => (
+              <li onClick={x.action} key={'icon' + i} className={x.class}>
+                { x.icon }
               </li>
             ))}
           </ul>
